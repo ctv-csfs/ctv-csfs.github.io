@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>CTV + CSFS</title>
+    </head>
+
+    <body>
+        <p>
+        <b>To the technical bitcoin community,</b>
+        </p>
+        <p>
+        We believe that the best next step for bitcoin would be to activate <span class="code">OP_CHECKTEMPLATEVERIFY</span> (CTV, <a href="https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki">BIP-119</a>) and <span class="code">OP_CHECKSIGFROMSTACK</span> (CSFS, <a href="https://github.com/bitcoin/bips/blob/master/bip-0348.md">BIP-348</a>). These opcodes enable functionality for a broad set of uses that will allow bitcoin to preserve and expand its role as a scarce, censorship-resistant store of value.
+        </p>
+
+        <p>
+        While there are a few promising proposals to improve bitcoin at the consensus layer which may someday be deployed, we believe that CTV and CSFS are uniquely well reviewed, simple, and have been proven to be both safe and widely demanded.
+        </p>
+
+        <p>
+        CTV was first formalized in BIP-119 over 5 years ago. Despite many attempts at refinement or replacement, it has remained the most widely preferred method for enforcing pregenerated transaction sequences using consensus. It unlocks valuable functionality for scaling solutions, vaults, congestion control, non-custodial mining, discreet log contracts, and <a href="https://bitcoinops.org/en/topics/op_checktemplateverify/#optech-newsletter-and-website-mentions">more</a>.
+        </p>
+
+        <p>
+        CSFS is a primitive opcode that has been deployed to Blockstream’s Elements for at least 8 years. It represents no significant computational burden over bitcoin’s most often used opcode, <span class="code">OP_CHECKSIG</span>. It can be combined with CTV to implement <a href="https://bitcoinops.org/en/topics/eltoo/">ln-symmetry</a>, a longstanding improvement to Lightning. It also unlocks a variety of <a href="https://bitcoinops.org/en/topics/op_checksigfromstack/">other use cases</a>.
+        </p>
+
+        <p>
+        We respectfully ask Bitcoin Core contributors to prioritize the review and integration of CTV (PR <a href="https://github.com/bitcoin/bitcoin/pull/31989">#31989</a> or similar) and CSFS (PR <a href="https://github.com/bitcoin/bitcoin/pull/32247">#32247</a> or similar) within the next six months. We believe this timeline allows for rigorous final review and activation planning.
+        </p>
+
+        <p>
+        This request isn't meant to suggest that these contributors dictate the consensus process, but rather it is an acknowledgement that before these opcodes can be activated, they must be implemented in the most widely used bitcoin client.
+        </p>
+
+        <p>
+        As application and protocol developers, we are convinced of the significant benefits that these changes would bring to end users of bitcoin &ndash; even if only considering their use for layer 1 security and layer 2 scaling solutions. We are optimistic that given the limited size and scope of these changes in both concept and implementation, they represent a realistic next step in the continuing and important work of preserving bitcoin's unique promise.
+        </p>
+
+        <div class="sigs">
+            <p>
+            <i>Signed,</i>
+            </p>
+
+            <ul class="signatories">
+
+                <li><a href="https://x.com/dimahledba">Abdel</a> (<a href="https://starkware.co/">Starkware</a>)</li>
+                <li>Andrew Poelstra (<a href="https://github.com/apoelstra">@apoelstra</a>)</li>
+                <li>Ben Carman (<a href="https://github.com/benthecarman">@benthecarman</a>)</li>
+                <li>Ben Kaufman (<a href="https://github.com/ben-kaufman">@ben-kaufman</a>)</li>
+                <li>Brandon Black (<a href="https://github.com/reardencode">@reardencode</a>)</li>
+                <li><a href="https://github.com/blangel">Brian Langel</a> (for <a href="https://fivebellssettlement.com/">Five Bells</a>)</li>
+                <li>Buck Perley (<a href="https://x.com/puckberley">@puckberley</a>)</li>
+                <li><a href="https://github.com/callebtc">Calle</a> (<a href="https://cashu.space/">Cashu</a>)</li>
+                <li>Calvin Kim (<a href="https://github.com/kcalvinalvin">@kcalvinalvin</a>)</li>
+                <li><a href="https://x.com/coinjoined">Coinjoined Chris</a> (<a href="https://x.com/Bitsurance_">Bitsurance.eu</a>)</li>
+                <li><a href="https://github.com/kaloudis">Evan Kaloudis</a> (for <a href="https://zeusln.com/">Zeus</a>)</li>
+                <li>fiatjaf (<a href="https://github.com/fiatjaf">@fiatjaf</a>)</li>
+                <li>Floppy (<a href="https://x.com/1440000bytes">@1440000bytes</a>)</li>
+                <li>Gary Krause (<a href="https://github.com/average-gary">@average-gary</a>)</li>
+                <li>Harsha Goli (<a href="https://github.com/arshbot">@arshbot</a>)</li>
+                <li>Hunter Beast (<a href="https://x.com/cryptoquick">@cryptoquick</a>)</li>
+                <li>James O’Beirne (<a href="https://github.com/jamesob">@jamesob</a>)</li>
+                <li>Jameson Lopp (<a href="https://github.com/jlopp">@jlopp</a>)</li>
+                <li>Johan Halseth (<a href="https://github.com/halseth">@halseth</a>)</li>
+                <li>Luke Childs (<a href="https://x.com/lukechilds">@lukechilds</a>)</li>
+                <li><a href="https://github.com/matthewjablack">Matt Black</a> (for <a href="https://atomic.finance/">Atomic Finance</a>)</li>
+                <li>Michael Tidwell (<a href="https://github.com/miketwenty1">@miketwenty1</a>)</li>
+                <li><a href="https://x.com/hash_bender">Nick Hansen</a> (for <a href="https://luxor.tech">Luxor Mining</a>)</li>
+                <li>nvk (<a href="https://github.com/nvk">@nvk</a>)</li>
+                <li><a href="https://x.com/OwenKemeys">Owen Kemeys</a> (for <a href="https://foundation.xyz">Foundation</a>)</li>
+                <li>Paul Sztorc (<a href="https://github.com/psztorc">@psztorc</a>)</li>
+                <li><a href="https://github.com/portlandhodl">Portland.HODL</a> (for <a href="https://mempool.space/mining/pool/marapool">MARA Pool</a>)</li>
+                <li>Rijndael (<a href="https://github.com/rot13maxi">@rot13maxi</a>)</li>
+                <li>Rob Hamilton (<a href="https://github.com/rob1ham">@rob1ham</a>)</li>
+                <li>Robin Linus (<a href="https://github.com/RobinLinus">@RobinLinus</a>)</li>
+                <li>Sanket Kanjalkar (<a href="https://github.com/sanket1729">@sanket1729</a>)</li>
+                <li>Sean Ryan (<a href="https://blockspace.media/podcast/scaling-the-bitcoin-l1-with-vaults-w-sean-ryan/">Anchorage</a>)</li>
+                <li>Seth for Privacy (<a href="https://github.com/sethforprivacy">@sethforprivacy</a>)</li>
+                <li><a href="https://x.com/simanta_gautam">Simanta Gautam</a> (<a href="https://www.alpenlabs.io">Alpen Labs</a>)</li>
+                <li>stutxo (<a href="https://github.com/stutxo">@stutxo</a>)</li>
+                <li>Talip (<a href="https://x.com/otaliptus">@otaliptus</a>)</li>
+                <li>mononaut (<a href="https://twitter.com/mononautical">@mononautical</a>)</li>
+                <li>vnprc (<a href="https://github.com/vnprc">@vnprc</a>)</li>
+
+            </ul>
+
+         </div>
+
+<style>
+body {
+    font-family: "Gill Sans","Gill Sans MT",Helvetica,Arial,Verdana,SansSerif;
+    font-size: 100%;
+    line-height: 150%;
+    margin: 3em;
+    background-color: #eaeef0;
+    color: black;
+    width: 600px;
+    padding-top: 40px;
+}
+
+span.code {
+    font-family: monospace;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: #000090;
+}
+
+ul.signatories {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+ul.signatories li {
+}
+
+div.sigs {
+    margin-top: 40px;
+}
+
+p {
+    margin-top: 1.5em;
+}
+
+</style>
+
+    </body>
+</html>
