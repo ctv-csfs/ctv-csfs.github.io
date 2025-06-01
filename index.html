@@ -48,15 +48,18 @@ p {
     <body>
         <p>
         We the signatories believe that the activations of <span class="code">OP_CHECKTEMPLATEVERIFY</span> (CTV) (<a href="https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki">BIP-119</a>) and <span class="code">OP_CHECKSIGFROMSTACK</span> (CSFS) (<a href="https://github.com/bitcoin/bips/blob/master/bip-0348.md">BIP-348</a>) are the appropriate next steps for bitcoin. These opcodes enable crucial functionality for a broad set of uses that will allow bitcoin to preserve and expand its role as a scarce, censorship-resistant store of value.
-        We believe these changes have been thoroughly reviewed in both concept and implementation for safety.
         </p>
 
         <p>
-CTV was first formalized in BIP-119 over 5 years ago, and despite many attempts at refinement and reinvention, its implementation has been largely unchanged since then. It unlocks valuable functionality for scaling solutions (Ark, timeout trees, non-interactive lightning), vaults, congestion control, mining improvements, discrete log contracts, and more.
+        While there are a few promising proposals to improve bitcoin at the consensus layer (which may someday be deployed), we believe that CTV and CSFS are uniquely well reviewed, simple, and have been proven to be both safe and widely demanded.
         </p>
 
         <p>
-CSFS is a primitive opcode that has been deployed to Blockstream’s Elements for at least 8 years. It represents no significant computational changes over what bitcoin’s most popular opcode, CHECKSIG, already does. It can be combined with CTV to implement ln-symmetry, a longstanding improvement to Lightning. It also unlocks a variety of other use cases.
+            CTV was first formalized in BIP-119 over 5 years ago, and despite many attempts at refinement and reinvention, its implementation has been largely unchanged since then. It unlocks valuable functionality for scaling solutions, vaults, congestion control, mining improvements, discrete log contracts, and <a href="https://bitcoinops.org/en/topics/op_checktemplateverify/#optech-newsletter-and-website-mentions">more</a>.
+        </p>
+
+        <p>
+            CSFS is a primitive opcode that has been deployed to Blockstream’s Elements for at least 8 years. It represents no significant computational changes over what bitcoin’s most often used opcode, CHECKSIG, already does. It can be combined with CTV to implement ln-symmetry, a longstanding improvement to Lightning. It also unlocks a variety of <a href="https://bitcoinops.org/en/topics/op_checksigfromstack/">other use cases</a>.
         </p>
 
         <p>
@@ -64,7 +67,7 @@ CSFS is a primitive opcode that has been deployed to Blockstream’s Elements fo
         </p>
 
         <p>
-We do not embark on this lightly - however the lack of engagement on the part of the Bitcoin Core project to undertake the important work of these changes has been surprising to us. We would prefer not to fork, but if we do so it will be in the service of making bitcoin ever more resilient.
+We do not embark on this lightly - however, the lack of engagement on the part of the Bitcoin Core project to undertake the important work of furthering bitcoin's scripting capabilities has been surprising to us, and we conclude it indicates a growing risk to bitcoin. We would prefer to continue as a unified project, but the long-term resilience of bitcoin itself to capture by a single institution is more important than social cohesion.
         </p>
 
         <div class="sigs">
@@ -76,6 +79,7 @@ We do not embark on this lightly - however the lack of engagement on the part of
 
                 <li>James O’Beirne (<a href="https://github.com/jamesob">@jamesob</a>)</li>
                 <li>Ben Carman (<a href="https://github.com/benthecarman">@benthecarman</a>)</li>
+                <li>Brandon Black (<a href="https://github.com/reardencode">@reardencode</a>)</li>
 
             </ul>
 
