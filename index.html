@@ -5,6 +5,9 @@
 
     <body>
         <p>
+        To the technical bitcoin community,
+        </p>
+        <p>
         We believe that the activation of <span class="code">OP_CHECKTEMPLATEVERIFY</span> (CTV) (<a href="https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki">BIP-119</a>) and <span class="code">OP_CHECKSIGFROMSTACK</span> (CSFS) (<a href="https://github.com/bitcoin/bips/blob/master/bip-0348.md">BIP-348</a>) is the appropriate next step for bitcoin. These opcodes enable crucial functionality for a broad set of uses that will allow bitcoin to preserve and expand its role as a scarce, censorship-resistant store of value.
         </p>
 
@@ -13,23 +16,19 @@
         </p>
 
         <p>
-            CTV was first formalized in BIP-119 over 5 years ago, and despite many attempts at refinement and reinvention, its implementation has been materially unchanged since then. It unlocks valuable functionality for scaling solutions, vaults, congestion control, mining improvements, discrete log contracts, and <a href="https://bitcoinops.org/en/topics/op_checktemplateverify/#optech-newsletter-and-website-mentions">more</a>.
+        CTV was first formalized in BIP-119 over 5 years ago. Despite many attempts at refinement or replacement, it has remained the most widely preferred method for enforcing pregenerated transaction sequences using consensus. It unlocks valuable functionality for scaling solutions, vaults, congestion control, non-custodial mining, discrete log contracts, and <a href="https://bitcoinops.org/en/topics/op_checktemplateverify/#optech-newsletter-and-website-mentions">more</a>.
         </p>
 
         <p>
-            CSFS is a primitive opcode that has been deployed to Blockstream’s Elements for at least 8 years. It represents no significant computational burden over bitcoin’s most often used opcode, <span class="code">OP_CHECKSIG</span>. It can be combined with CTV to implement <a href="https://bitcoinops.org/en/topics/eltoo/">ln-symmetry</a>, a longstanding improvement to Lightning. It also unlocks a variety of <a href="https://bitcoinops.org/en/topics/op_checksigfromstack/">other use cases</a>.
+        CSFS is a primitive opcode that has been deployed to Blockstream’s Elements for at least 8 years. It represents no significant computational burden over bitcoin’s most often used opcode, <span class="code">OP_CHECKSIG</span>. It can be combined with CTV to implement <a href="https://bitcoinops.org/en/topics/eltoo/">ln-symmetry</a>, a longstanding improvement to Lightning. It also unlocks a variety of <a href="https://bitcoinops.org/en/topics/op_checksigfromstack/">other use cases</a>.
         </p>
 
         <p>
-        We respectfully call on the Bitcoin Core project to prioritize the review and integration of CTV (PR <a href="https://github.com/bitcoin/bitcoin/pull/31989">#31989</a>) and CSFS (PR <a href="https://github.com/bitcoin/bitcoin/pull/32247">#32247</a>) into Bitcoin Core within the next six months. This timeline allows for thorough evaluation and activation planning while meeting the community’s persistent demand for these proposals. 
+        We respectfully call on the Bitcoin Core project to prioritize the review and integration of CTV (PR <a href="https://github.com/bitcoin/bitcoin/pull/31989">#31989</a>) and CSFS (PR <a href="https://github.com/bitcoin/bitcoin/pull/32247">#32247</a>) into Bitcoin Core within the next six months. We believe this timeline allows for thorough final review and activation planning.
         </p>
 
         <p>
-        Should this target date, 1 Jan 2026, pass without meaningful progress, we are prepared to fork Bitcoin Core and apply a minimal patch to implement the activation logic for these opcodes. Such a step would be taken with the utmost respect for bitcoin’s consensus process and an understanding of the responsibilities associated with providing such a client.
-        </p>
-
-        <p>
-As application and protocol developers, we are convinced of the significant benefits that these changes would bring to end users of bitcoin &ndash; even when only considering their use for layer 2 scaling solutions like Ark and LN. The apparent disconnection of the Bitcoin Core project from these developments has confused us. We would prefer to continue as a unified project, but the resilience of bitcoin itself against control by a single institution is a higher goal.
+        As application and protocol developers, we are convinced of the significant benefits that these changes would bring to end users of bitcoin &ndash; even if only considering their use for layer 1 security and layer 2 scaling solutions like Ark and LN. We are optimistic that given the limited size and scope of these changes in both concept and implementation, they represent a realistic next step in the continuing and important work of preserving bitcoin's unique promise.
         </p>
 
         <div class="sigs">
@@ -45,6 +44,8 @@ As application and protocol developers, we are convinced of the significant bene
                 <li>Michael Tidwell (<a href="https://github.com/miketwenty1">@miketwenty1</a>)</li>
                 <li>Matt Black (<a href="https://github.com/matthewjablack">@matthewjablack</a>)</li>
                 <li>Harsha Goli (<a href="https://github.com/arshbot">@arshbot</a>)</li>
+                <li>vnprc (<a href="https://github.com/vnprc">@vnprc</a>)</li>
+                <li>Jameson Lopp (<a href="https://github.com/jlopp">@jlopp</a>)</li>
 
             </ul>
 
@@ -66,12 +67,10 @@ span.code {
     font-family: monospace;
 }
 
-a:link {
-    color: #0000aa;
-}
-
-a:visited {
-    color: #660066;
+a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: #000090;
 }
 
 ul.signatories {
