@@ -78,6 +78,7 @@
                 <li>Gary Krause (<a href="https://github.com/average-gary">@average-gary</a>)</li>
                 <li>Harsha Goli (<a href="https://github.com/arshbot">@arshbot</a>)</li>
                 <li>Hunter Beast (<a href="https://x.com/cryptoquick">@cryptoquick</a>)</li>
+                <li>Jad Mubaslat (<a href="https://x.com/champbronc2">@champbronc2</a>)</li>
                 <li>James O’Beirne (<a href="https://github.com/jamesob">@jamesob</a>)</li>
                 <li>Jameson Lopp (<a href="https://github.com/jlopp">@jlopp</a>)</li>
                 <li>Johan Halseth (<a href="https://github.com/halseth">@halseth</a>)</li>
@@ -85,6 +86,7 @@
                 <li><a href="https://github.com/matthewjablack">Matt Black</a> (for <a href="https://atomic.finance/">Atomic Finance</a>)</li>
                 <li>Michael Tidwell (<a href="https://github.com/miketwenty1">@miketwenty1</a>)</li>
                 <li><a href="https://x.com/hash_bender">Nick Hansen</a> (for <a href="https://luxor.tech">Luxor Mining</a>)</li>
+                <li>Nitesh (<a href="https://x.com/nitesh_btc">@nitesh_btc</a>)</li>
                 <li>nvk (<a href="https://github.com/nvk">@nvk</a>)</li>
                 <li><a href="https://x.com/OwenKemeys">Owen Kemeys</a> (for <a href="https://foundation.xyz">Foundation</a>)</li>
                 <li>Paul Sztorc (<a href="https://github.com/psztorc">@psztorc</a>)</li>
@@ -141,7 +143,18 @@ ul.signatories {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
-ul.signatories li {
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        margin: 0.5em;
+        padding-top: 10px;
+    }
+    
+    ul.signatories {
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+    }
 }
 
 div.sigs {
@@ -152,6 +165,7 @@ div.sign {
     margin-top: 100px;
     font-style: italic;
     color: #aaa;
+    padding-right: 50px;
 }
 
 div.sign a {
