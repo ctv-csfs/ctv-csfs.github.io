@@ -41,7 +41,7 @@
         </p>
 
         <p>
-        CSFS is a primitive opcode that has been deployed to Blockstream’s Elements for at least 8 years. It represents no significant computational burden over bitcoin’s most often used opcode, <span class="code">OP_CHECKSIG</span>. It can be combined with CTV to implement <a href="https://bitcoinops.org/en/topics/eltoo/">ln-symmetry</a>, a longstanding improvement to Lightning. It also unlocks a variety of <a href="https://bitcoinops.org/en/topics/op_checksigfromstack/">other use cases</a>.
+        CSFS is a primitive opcode that has been deployed to Blockstream's Elements for at least 8 years. It represents no significant computational burden over bitcoin's most often used opcode, <span class="code">OP_CHECKSIG</span>. It can be combined with CTV to implement <a href="https://bitcoinops.org/en/topics/eltoo/">ln-symmetry</a>, a longstanding improvement to Lightning. It also unlocks a variety of <a href="https://bitcoinops.org/en/topics/op_checksigfromstack/">other use cases</a>.
         </p>
 
         <p>
@@ -61,7 +61,19 @@
             <i>Signed,</i>
             </p>
 
-            <ul class="signatories">
+            <input type="text" id="signatorySearch" placeholder="Search signatories..." style="
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 20px;
+                font-family: inherit;
+                font-size: 100%;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                background-color: #fff;
+                color: #000;
+            ">
+
+            <ul class="signatories" id="signatoriesList">
 
                 <li><a href="https://x.com/dimahledba">Abdel</a> (<a href="https://starkware.co/">Starkware</a>)</li>
                 <li><a href="https://x.com/NotASithLord">Ariel Deschapell</a> (<a href="https://bipbounty.org">BIPbounty</a>)</li>
@@ -89,7 +101,7 @@
                 <li>Harsha Goli (<a href="https://github.com/arshbot">@arshbot</a>)</li>
                 <li>Hunter Beast (<a href="https://x.com/cryptoquick">@cryptoquick</a>)</li>
                 <li>Jad Mubaslat (<a href="https://x.com/champbronc2">@champbronc2</a>)</li>
-                <li>James O’Beirne (<a href="https://github.com/jamesob">@jamesob</a>)</li>
+                <li>James O'Beirne (<a href="https://github.com/jamesob">@jamesob</a>)</li>
                 <li>Jameson Lopp (<a href="https://github.com/jlopp">@jlopp</a>)</li>
                 <li><a href="https://github.com/jaybny">Jay Berg</a> (for <a href="https://sidepit.com/">Sidepit</a>)</li>
                 <li>Johan Halseth (<a href="https://github.com/halseth">@halseth</a>)</li>
@@ -212,6 +224,24 @@ p {
 }
 
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('signatorySearch');
+    const signatoriesList = document.getElementById('signatoriesList');
+    const signatories = Array.from(signatoriesList.getElementsByTagName('li'));
+
+    searchInput.addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        
+        signatories.forEach(signatory => {
+            const text = signatory.textContent.toLowerCase();
+            const shouldShow = text.includes(searchTerm);
+            signatory.style.display = shouldShow ? '' : 'none';
+        });
+    });
+});
+</script>
 
     </body>
 </html>
